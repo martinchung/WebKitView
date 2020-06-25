@@ -14,6 +14,7 @@
 		5BB5FA6D24A2D73B00C0FEAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB5FA6C24A2D73B00C0FEAD /* Assets.xcassets */; };
 		5BB5FA7024A2D73B00C0FEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB5FA6E24A2D73B00C0FEAD /* LaunchScreen.storyboard */; };
 		5BB5FA7B24A2D73C00C0FEAD /* WebKitViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5FA7A24A2D73C00C0FEAD /* WebKitViewTests.swift */; };
+		5BB5FA8624A42EAA00C0FEAD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BB5FA8524A42EAA00C0FEAD /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		5BB5FA7624A2D73B00C0FEAD /* WebKitViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebKitViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BB5FA7A24A2D73C00C0FEAD /* WebKitViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebKitViewTests.swift; sourceTree = "<group>"; };
 		5BB5FA7C24A2D73C00C0FEAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BB5FA8524A42EAA00C0FEAD /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 		5BB5FA5724A2D73900C0FEAD = {
 			isa = PBXGroup;
 			children = (
+				5BB5FA8524A42EAA00C0FEAD /* Settings.bundle */,
 				5BB5FA6224A2D73A00C0FEAD /* WebKitView */,
 				5BB5FA7924A2D73B00C0FEAD /* WebKitViewTests */,
 				5BB5FA6124A2D73A00C0FEAD /* Products */,
@@ -180,6 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BB5FA8624A42EAA00C0FEAD /* Settings.bundle in Resources */,
 				5BB5FA7024A2D73B00C0FEAD /* LaunchScreen.storyboard in Resources */,
 				5BB5FA6D24A2D73B00C0FEAD /* Assets.xcassets in Resources */,
 				5BB5FA6B24A2D73A00C0FEAD /* Main.storyboard in Resources */,
