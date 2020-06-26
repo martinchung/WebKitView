@@ -14,7 +14,7 @@
 		5BB5FA6D24A2D73B00C0FEAD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BB5FA6C24A2D73B00C0FEAD /* Assets.xcassets */; };
 		5BB5FA7024A2D73B00C0FEAD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BB5FA6E24A2D73B00C0FEAD /* LaunchScreen.storyboard */; };
 		5BB5FA7B24A2D73C00C0FEAD /* WebKitViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BB5FA7A24A2D73C00C0FEAD /* WebKitViewTests.swift */; };
-		5BB5FA8624A42EAA00C0FEAD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BB5FA8524A42EAA00C0FEAD /* Settings.bundle */; };
+		5BB5FA8724A5278700C0FEAD /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 5BB5FA8524A42EAA00C0FEAD /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -183,7 +183,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BB5FA8624A42EAA00C0FEAD /* Settings.bundle in Resources */,
+				5BB5FA8724A5278700C0FEAD /* Settings.bundle in Resources */,
 				5BB5FA7024A2D73B00C0FEAD /* LaunchScreen.storyboard in Resources */,
 				5BB5FA6D24A2D73B00C0FEAD /* Assets.xcassets in Resources */,
 				5BB5FA6B24A2D73A00C0FEAD /* Main.storyboard in Resources */,

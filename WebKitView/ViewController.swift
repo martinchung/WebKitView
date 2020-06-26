@@ -13,34 +13,21 @@ class ViewController: UIViewController, WKUIDelegate {
 
     @IBOutlet weak var webView: WKWebView!
     
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         //MARK: Get settings
-        
         let defaults = UserDefaults.standard // appDefaults = [String: Any]()
-        
-        var urlString = defaults.object(forKey: "theURL") as! String?
-        
-        // check if we do have the URL to open in app settings and open it if we do
-        if urlString == nil {
+        let urlString = defaults.string(forKey: "theURL")
 
-            /*
-                     let settingsUrl = Bundle.main.path(forResource: "Settings",  ofType: "bundle")!.appendingPathComponent("Root.plist")
-                    
-                    let settingsPlist = NSDictionary(contentsOf: settingsUrl)!
-                    let preferences = settingsPlist["PreferenceSpecifiers"] as! [NSDictionary]
-            */
-
-            urlString = "https://www.apple.ca"      //TODO: Retrieve default url from settings bundle
-            defaults.set(urlString, forKey: "theURL")
-        }
+        // NotificationCenter.default.addObserver(self, selector: #selector(settingChanged(notification:)), name: UserDefaults.didChangeNotification, object: nil)
         
-        let url = URL(string: urlString!)
-        let request = URLRequest(url: url!)
+        loadPage(url: urlString!)
         
-        webView.load(request)
     }
 
     override func loadView() {
@@ -50,6 +37,34 @@ class ViewController: UIViewController, WKUIDelegate {
         view = webView
     }
     
+    
+    func loadPage(url: String) {
+        let url = URL(string: url)
+        let request = URLRequest(url: url!)
+        
+        webView.load(request)
+    }
+    
+    
+    @objc func settingChanged(notification: NSNotification) {
+        if let defaults = notification.object as? UserDefaults {
+            if let setting = defaults.string(forKey: "theURL") {
+                print("setting changed to " + setting)
+                loadPage(url: setting)
+            }
+        }
+    }
+    
+    func registerSettingsBundle() {
+        let appDefaults = [String: AnyObject]()
+        UserDefaults.standard.register(defaults: appDefaults)
+    }
 
+    
+
+    
+    
+    
+    
 }
 
