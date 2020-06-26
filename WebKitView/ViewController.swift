@@ -24,12 +24,13 @@ class ViewController: UIViewController, WKUIDelegate {
         let defaults = UserDefaults.standard // appDefaults = [String: Any]()
         let urlString = defaults.string(forKey: "theURL")
 
-        // NotificationCenter.default.addObserver(self, selector: #selector(settingChanged(notification:)), name: UserDefaults.didChangeNotification, object: nil)
+        // set up notification when setting is changed
+        NotificationCenter.default.addObserver(self, selector: #selector(settingChanged(notification:)), name: UserDefaults.didChangeNotification, object: nil)
         
         loadPage(url: urlString!)
-        
     }
 
+    
     override func loadView() {
         let webConfiguration = WKWebViewConfiguration()
         webView = WKWebView(frame: .zero, configuration: webConfiguration)
@@ -49,21 +50,11 @@ class ViewController: UIViewController, WKUIDelegate {
     @objc func settingChanged(notification: NSNotification) {
         if let defaults = notification.object as? UserDefaults {
             if let setting = defaults.string(forKey: "theURL") {
-                print("setting changed to " + setting)
+                NSLog("setting changed to " + setting)
                 loadPage(url: setting)
             }
         }
     }
-    
-    func registerSettingsBundle() {
-        let appDefaults = [String: AnyObject]()
-        UserDefaults.standard.register(defaults: appDefaults)
-    }
-
-    
-
-    
-    
     
     
 }
